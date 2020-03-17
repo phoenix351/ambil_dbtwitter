@@ -4,7 +4,9 @@
 from Database import Database
 import csv
 import string
-db = Database('root','','localhost','phoenix')
+import requests as req
+
+db = Database('16.9351','Tervertuntmu','localhost','16.9351')
 query= "select * from `corona_twit`"
 
 def bersih(objek):
@@ -23,7 +25,8 @@ def upload(file_path):
         print("File not accessible")
     finally:
         f.close()
-
+    url = "https://www.googleapis.com/upload/drive/v3/files?uploadType=resumable"
+    r = req.post(url)
 
 
 
@@ -36,7 +39,7 @@ try:
     for row in db.cursor:
         x = "aman"
         try:
-            with open('dari_db.csv', 'a') as f:
+            with open('data_new.csv', 'a') as f:
                 x = row['Hashtag']
                 writer = csv.writer(f)
                 if row['Description']:
@@ -49,7 +52,7 @@ try:
                     row['Hashtag'] = bersih(row['Hashtag'])
 
                 writer.writerow([row['Time'],row['Description'],row['Usertweets'],row['Source'],row['Target'],
-                    row['Verified'],row['Text'],row['Hashtag'],row['location'],row['Following'],row['Followers'],row['Retweets']])
+                    row['Verified'],row['Text'],row['Hashtag'],row['location'],row['Following'],row['Followers'],row['Retweets'],row['Place'],row['Country_code']])
 
         except Exception as e:
             print('error :',x)
