@@ -1,3 +1,7 @@
+import os
+ins = "pip3 install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib"
+os.system(ins)
+
 from __future__ import print_function
 import pickle
 import os.path
