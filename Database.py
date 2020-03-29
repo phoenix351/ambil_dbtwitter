@@ -3,7 +3,7 @@ import pymysql
 class Database:
     def __init__(self,user_name,passwd,host_name,db_name):
         try:
-            print('user = ',user_name)
+
             self.connection = pymysql.connect(host=host_name,
                                  user=user_name,
                                  password=passwd,
