@@ -3,10 +3,10 @@ import csv
 import sys
 
 # Fill the API Key
-consumer_key = "JPBmvXnfwZs2gXtdjGfKQDffw"
-consumer_secret = "e0XM9D1BiItnQgPM5OaoVQ88W8SeZyi0Bn3qFQji041leexsWs"
-access_token = "1237633057084952576-wx8X5OKc3suECeS0xXaNECBSbDHTNk"
-access_token_secret = "dBKnxkVYgSzPLAXlInJCu82vBwNwg0dToKjDt1duQ4xcv"
+consumer_key = "RCSAqyk9HSlhb2gLgxR2W92iL"
+consumer_secret = "68gX0fBZyOCmgEun0ia5tEfS3zyoStz2E12gpTbk1NlYZH9tJC"
+access_token = "1242416699317477376-hrPhHXPhQoPDDhjscChNLsrFH2DNVv"
+access_token_secret = "ha2VVykrZw5Jo4wlVPNotExJlIxT3A25kNG60G3g9Fvn9"
 
 # Auth.
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
@@ -621,8 +621,6 @@ class CustomStreamListener(tweepy.StreamListener):
 
 
 # ini keywordnya
-keyword_list = [
-    'dagang,jasa,omzet,jual,beli,harga,sembako,bahan makanan,makanan,gofood,go food,pendapatan,workfromhome,konstruksi,bangunan,pekerjaan,ekonomi,ojek,ojol,harga beras,harga tepung,inflasi']
-
+keyword_list = ['ekonomi, inflasi, keuangan,harga, saham']
 streamingAPI = tweepy.streaming.Stream(auth, CustomStreamListener())
 streamingAPI.filter(track=keyword_list)
