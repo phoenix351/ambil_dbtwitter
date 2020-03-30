@@ -39,26 +39,27 @@ def get_service():
             pickle.dump(creds, token)
 
     service = build('drive', 'v3', credentials=creds)
-    return service
-
-    '''
     # Call the Drive v3 API
     file_metadata = {'name': 'data_new'}
-    media = MediaFileUpload('data_new.csv',
+    media = MediaFileUpload('corona.csv',
                             mimetype='text/csv')
     file = service.files().create(body=file_metadata,
-                                        media_body=media,
-                                        fields='id').execute()
+                                  media_body=media,
+                                  fields='id').execute()
     print('File ID: %s' % file.get('id'))
 
-    file_metadata1 = {'name': 'data_old'}
+    file_metadata1 = {'name': 'ekonomi'}
 
-    media1 = MediaFileUpload('data_old.csv',
-                            mimetype='text/csv')
+    media1 = MediaFileUpload('ekonomi.csv',
+                             mimetype='text/csv')
     file1 = service.files().create(body=file_metadata1,
-                                  media_body=media1,
-                                  fields='id').execute()
+                                   media_body=media1,
+                                   fields='id').execute()
     print('File ID: %s' % file1.get('id'))
+    #return service
+
+
+
     '''
 def update_file(service, file_id, new_filename):
   """Update an existing file's metadata and content.
@@ -80,7 +81,7 @@ def update_file(service, file_id, new_filename):
     #file['description'] = str("last_update = " + datetime.strftime(datetime.now(),'%d-%m-%Y %H:%M'))
     #file['mimeType'] = new_mime_type
     file = {
-        'name' :'cobagdrive'
+        'name' :new_filename
     }
 
     # File's new content.
@@ -100,6 +101,7 @@ def update_file(service, file_id, new_filename):
 service = get_service()
 update_file(service,"1SvlPWahahlj0fArcpfad4Fjn0ggs_NF-",'corona.csv')
 update_file(service,"1Ui1LwT_exEje5BnRZC2fMHMBZH9T0eXL",'ekonomi.csv')
-
+'''
+get_service()
 
 
