@@ -1,12 +1,12 @@
 import tweepy
 import csv
 import sys
-
 # Fill the API Key
-consumer_key = "JPBmvXnfwZs2gXtdjGfKQDffw"
-consumer_secret = "e0XM9D1BiItnQgPM5OaoVQ88W8SeZyi0Bn3qFQji041leexsWs"
-access_token = "1237633057084952576-wx8X5OKc3suECeS0xXaNECBSbDHTNk"
-access_token_secret = "dBKnxkVYgSzPLAXlInJCu82vBwNwg0dToKjDt1duQ4xcv"
+consumer_key = "3xiq8lS3b7xIMNhtXo1zGxqry"
+consumer_secret = "SFq7oeFsRa9NAP7rp5ETXAPrGZpdlP3R9owDLrUkKdoB2kHnD2"
+access_token = "1237633057084952576-gYchMdjf8OH7bPheYP8PIa8QEzC85T"
+access_token_secret = "tZTGG6F5VmKwRMexmGzuh0AYP1hzsI6TwYeol3uHEBQjs"
+
 
 # Auth.
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
