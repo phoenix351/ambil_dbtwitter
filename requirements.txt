@@ -76,7 +76,7 @@ h5py==2.8.0
 heapdict==1.0.0
 holidays==0.9.11
 html5lib==1.0.1
-httplib2==0.17.0
+httplib2==0.18.0
 hupper==1.9.1
 hyperlink==19.0.0
 idna==2.8
