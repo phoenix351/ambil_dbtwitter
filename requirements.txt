@@ -50,7 +50,7 @@ db-sqlite3==0.0.1
 decorator==4.3.0
 defusedxml==0.5.0
 dicom==0.9.9.post1
-distributed==1.25.1
+distributed==2021.10.0
 Django==3.0.1
 djangorestframework==3.11.0
 docutils==0.14
